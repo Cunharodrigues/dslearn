@@ -89,6 +89,4 @@ public class Enrollment implements Serializable {
 		this.onlyUpdate = onlyUpdate;
 	}
 	
-	
-
 }
