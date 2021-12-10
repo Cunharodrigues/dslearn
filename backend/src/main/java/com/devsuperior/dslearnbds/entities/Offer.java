@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -38,6 +39,9 @@ public class Offer implements Serializable {
 	@OneToMany(mappedBy = "offer")
 	private List<Resource> resources = new ArrayList<>();
 
+	@OneToMany(mappedBy = "offer")
+	private List<Topic> topics = new ArrayList<>();
+	
 	public Offer() {
 
 	}
@@ -97,6 +101,10 @@ public class Offer implements Serializable {
 
 	public List<Resource> getResources() {
 		return resources;
+	}
+	
+	public List<Topic> getTopics() {
+		return topics;
 	}
 
 	@Override
