@@ -112,19 +112,6 @@ public class Deliver implements Serializable {
 				
 	}
 
-	public Deliver(String id, String uri, Instant moment, DeliverStatus status, String feedback, Integer correctCount,
-			Enrollment enrollment, Lesson lesson) {
-		super();
-		this.id = id;
-		Uri = uri;
-		this.moment = moment;
-		this.status = status;
-		this.feedback = feedback;
-		this.correctCount = correctCount;
-		this.enrollment = enrollment;
-		this.lesson = lesson;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
