@@ -118,4 +118,9 @@ public class Notification implements Serializable {
 		return true;
 	}
 
+	public Boolean isRead() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
