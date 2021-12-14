@@ -22,7 +22,7 @@ public class Deliver implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	private Long id;
 	private String Uri;
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
@@ -44,11 +44,11 @@ public class Deliver implements Serializable {
 	@JoinColumn(name = "lesson_id")
 	private Lesson lesson;
 	
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -136,7 +136,4 @@ public class Deliver implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-
 }
